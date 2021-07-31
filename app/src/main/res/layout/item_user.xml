@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/userContainer"
+    android:animateLayoutChanges="true"
+    android:padding="@dimen/_5sdp"
+    >
+
+    <TextView
+        android:id="@+id/textFirstChar"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/circle"
+        android:fontFamily="@font/ubuntu_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textAllCaps="true"
+        android:text="D"
+        android:textColor="@color/colorTextIcon"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+
+    <ImageView
+        android:id="@+id/img_selected"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_accept"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/textFirstChar"
+        app:layout_constraintTop_toTopOf="@+id/textFirstChar"
+        app:layout_constraintBottom_toBottomOf="@+id/textFirstChar"
+        app:layout_constraintEnd_toEndOf="@+id/textFirstChar"
+        app:tint="@color/colorTextIcon" />
+
+    <ImageView
+        android:id="@+id/ic_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_videocam"
+        app:layout_constraintBottom_toBottomOf="@+id/textFirstChar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textFirstChar" />
+
+    <ImageView
+        android:id="@+id/ic_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_phone"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/textFirstChar"
+        app:layout_constraintEnd_toStartOf="@id/ic_video"
+        app:layout_constraintTop_toTopOf="@+id/textFirstChar" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/textFirstChar"
+        app:layout_constraintEnd_toStartOf="@+id/ic_phone"
+        app:layout_constraintStart_toEndOf="@+id/textFirstChar"
+        app:layout_constraintTop_toTopOf="@+id/textFirstChar">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Dhiraj Chauhan"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:layout_weight="1"
+            android:gravity="top"
+            />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/you_example_com"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/ubuntu"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/_2sdp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/colorDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textFirstChar"
+        app:layout_constraintTop_toBottomOf="@+id/textFirstChar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
